@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
   res.json({ message: "ok" });
 });
 
-router.get("/data", function (req, res, next) {
+app.get("/data", function (req, res) {
   //query
   connection.query(
     "SELECT * FROM datas ORDER BY id desc",
