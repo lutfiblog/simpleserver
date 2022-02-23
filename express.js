@@ -34,10 +34,7 @@ router.get("/data", function (req, res, next) {
     "SELECT * FROM datas ORDER BY id desc",
     function (err, rows) {
       if (err) {
-        req.flash("error", err);
-        res.render("datas", {
-          data: "",
-        });
+        console.log("Ooop datanya eror........");
       } else {
         console.log(rows);
       }
